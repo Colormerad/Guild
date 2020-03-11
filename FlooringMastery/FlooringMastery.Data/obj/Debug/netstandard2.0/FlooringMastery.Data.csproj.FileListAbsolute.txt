@@ -1,0 +1,16 @@
+C:\Users\mandimay\source\repos\FlooringMastery\FlooringMastery.Data\bin\Debug\netstandard2.0\FlooringMastery.Models.dll
+C:\Users\mandimay\source\repos\FlooringMastery\FlooringMastery.Data\obj\Debug\netstandard2.0\FlooringMastery.Data.csprojAssemblyReference.cache
+C:\Users\mandimay\source\repos\FlooringMastery\FlooringMastery.Data\obj\Debug\netstandard2.0\FlooringMastery.Data.csproj.CoreCompileInputs.cache
+C:\Users\mandimay\source\repos\FlooringMastery\FlooringMastery.Data\obj\Debug\netstandard2.0\FlooringMastery.Data.AssemblyInfoInputs.cache
+C:\Users\mandimay\source\repos\FlooringMastery\FlooringMastery.Data\obj\Debug\netstandard2.0\FlooringMastery.Data.AssemblyInfo.cs
+C:\Users\mandimay\source\repos\FlooringMastery\FlooringMastery.Data\bin\Debug\netstandard2.0\NUnit3.TestAdapter.dll
+C:\Users\mandimay\source\repos\FlooringMastery\FlooringMastery.Data\bin\Debug\netstandard2.0\NUnit3.TestAdapter.pdb
+C:\Users\mandimay\source\repos\FlooringMastery\FlooringMastery.Data\bin\Debug\netstandard2.0\nunit.engine.dll
+C:\Users\mandimay\source\repos\FlooringMastery\FlooringMastery.Data\bin\Debug\netstandard2.0\nunit.engine.api.dll
+C:\Users\mandimay\source\repos\FlooringMastery\FlooringMastery.Data\bin\Debug\netstandard2.0\FlooringMastery.Data.deps.json
+C:\Users\mandimay\source\repos\FlooringMastery\FlooringMastery.Data\bin\Debug\netstandard2.0\FlooringMastery.Data.dll
+C:\Users\mandimay\source\repos\FlooringMastery\FlooringMastery.Data\bin\Debug\netstandard2.0\FlooringMastery.Data.pdb
+C:\Users\mandimay\source\repos\FlooringMastery\FlooringMastery.Data\bin\Debug\netstandard2.0\FlooringMastery.Models.pdb
+C:\Users\mandimay\source\repos\FlooringMastery\FlooringMastery.Data\obj\Debug\netstandard2.0\FlooringMastery.Data.csproj.CopyComplete
+C:\Users\mandimay\source\repos\FlooringMastery\FlooringMastery.Data\obj\Debug\netstandard2.0\FlooringMastery.Data.dll
+C:\Users\mandimay\source\repos\FlooringMastery\FlooringMastery.Data\obj\Debug\netstandard2.0\FlooringMastery.Data.pdb
