@@ -15,7 +15,7 @@ function refreshTable(items){
 }
 
 function formatItem(item){
-    var txt = '<div class="col-md-3 offset-sm-1 itemDiv" data-itemid="' + item.id + '"style="border: solid"  onmouseover="OnMouseIn (this)" onmouseout="OnMouseOut (this)""  > Item ID: ' 
+    var txt = '<div class="col-md-4 itemDiv" data-itemid="' + item.id + '"style="border: solid"  onmouseover="OnMouseIn (this)" onmouseout="OnMouseOut (this)""  > Item ID: ' 
     + item.id +'<br> Item Name: '+ item.name +'<br> Price: $'+item.price + '<br> Qty Remaining:' + item.quantity + '</div>' ;
     
     return txt; 

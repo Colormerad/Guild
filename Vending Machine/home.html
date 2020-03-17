@@ -2,61 +2,63 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    
     <title>Vending Machine</title>
     <link href="css/home.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Dosis|Josefin+Slab|Teko|Bree+Serif&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <style>
         body{
-            padding-top: 60px;
+            padding-top: 10px;
         }   
-   </style>  
+    </style>  
 </head>
+
+
 <body>
     <h1 style="text-align: center;">Vending Machine
     </h1>
+    <hr>
     <div class="row"> 
-    <div class="col-7 row"id="items">
-            <div class="row">
-                <div class="col-md-3 offset-md-1" style="border: solid" >1</div>
-                <div class="col-md-3 offset-md-1" style="border: solid">2</div>
-                <div class="col-md-3 offset-md-1"style="border: solid">3</div>
-            </div>
+    <div class="col-9 row"id="items">
+        <div class="row">
+             <div class="col-md-4 " style="border: solid" >1</div>
+             <div class="col-md-4 " style="border: solid">2</div>
+             <div class="col-md-4 " style="border: solid">3</div>
         </div>
-        <div class="col-4">
+    </div>
+        <div class="col-3">
             <form id="moneyIn">
                 <div class="form-group">
-                    <label>Total $ In</label>
+                    <label class="vendHeader">Total $ In</label>
                     <div class="input-group-prepend">
                         <span class="input-group-text">$</span>
                     <input type="text" class="form-control" id="moneyTotal" placeholder="0.00" readonly></div>
                     </div>
-                    <div><button type="button" class="btn btn-primary" value="1.00" id="dollar" onclick="moneyAppend(value)">Add Dollar</button>
-                    <button type="button" class="btn btn-primary" value=".25" id="quarter" onclick="moneyAppend(value)">Add Quarter</button></div>
-                    <br>
-                    <div><button type="button" class="btn btn-primary" value=".10" id="dime" onclick="moneyAppend(value)">Add Dime</button>
-                    <button type="button" class="btn btn-primary" value=".05" id="nickel" onclick="moneyAppend(value)">Add Nickel</button></div>
+                    <div><button type="button" class="button" value="1.00" id="dollar" onclick="moneyAppend(value)">Add Dollar</button>
+                    <button type="button" class="button" value=".25" id="quarter" onclick="moneyAppend(value)">Add Quarter</button>
+                    <button type="button" class="button" value=".10" id="dime" onclick="moneyAppend(value)">Add Dime</button>
+                    <button type="button" class="button" value=".05" id="nickel" onclick="moneyAppend(value)">Add Nickel</button></div>
                 </form>
                 <form>
                     <div class="form-group">
-                        <label>Messages</label>
+                        <label class="vendHeader">Messages</label>
                         <input type="text" class="form-control" id="messages" placeholder="..." readonly>
                         <div class="input-group-prepend">
                             <span class="input-group-text">Item:</span>
                         <input type="text" class="form-control" id="selection" placeholder="Please make your selection..." readonly></div>
                         </div>
-                        <button type="button" class="btn btn-primary" id="makePurchase"> Make Purchase</button>
+                        <button type="button" class="button" id="makePurchase"> Make Purchase</button>
                 </form>
                 <form>
                     <div class="form-group">
-                        <label>Change</label>
+                        <label class="vendHeader">Change</label>
                         <input type="text" class="form-control" id="change" placeholder="$0.00" readonly></div>
-                        <button type="button" class="btn btn-primary" id="changeReturn">Change Return<br></button>
+                        <button type="button" class="button" id="changeReturn">Change Return<br></button>
                 </form>
         </div>
       </div>
-
 
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"   integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="   crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>

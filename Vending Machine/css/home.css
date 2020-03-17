@@ -1,0 +1,113 @@
+.vendHeader {
+    font-family: 'Bree Serif', serif;
+  }
+  
+.button {
+    display: inline-block;
+    font-family: 'Dosis', sans-serif;
+    font-weight:bold;
+    border-radius: 4px;
+    background-color: white;
+    color: black;
+    border: 2px solid #bccad6;
+    transition-duration: 0.4s;
+    box-shadow: 5px 5px 7px rgba(33,33,33,.7);
+    text-align: center;
+    font-size: 18px;
+    padding: 10px;
+    width: 150px;
+    cursor: pointer;
+    margin: 7px;
+  }
+
+hr {
+    border: 0;
+    height: 0; 
+    box-shadow: 0 0 10px 1px #667292;
+}
+hr:after {  
+    content: "\00a0";  
+}
+
+.button:hover {
+    background-color: #667292; 
+    color: white;  
+}
+  
+h1, p{
+    font-size:140%;
+    font-weight:bold;
+    padding-bottom:30px;
+    font-family: 'Bree Serif', serif;
+    color: #667292  
+}
+
+#items{
+    overflow:hidden;
+    padding: 4em;
+}
+  
+.itemDiv{
+    text-align: center;
+    text-decoration:none;
+    color:#000;
+    background:#8d9db6;
+    display: block;
+    line-height: 2em;
+    height:10em;
+    width:10em;
+    float:left;
+    list-style:none;
+    font-family: 'Dosis', sans-serif;
+    padding:1px;
+  /* Firefox */
+  -moz-box-shadow:5px 5px 7px rgba(33,33,33,1);
+  /* Safari+Chrome */
+  -webkit-box-shadow: 5px 5px 7px rgba(33,33,33,.7);
+  /* Opera */
+  box-shadow: 5px 5px 7px rgba(33,33,33,.7);
+  -webkit-transform:rotate(-6deg);
+  -o-transform:rotate(-6deg);
+  -moz-transform:rotate(-6deg);
+}
+  
+.itemDiv:nth-child(even) {
+    -o-transform:rotate(2deg);
+    -webkit-transform:rotate(4deg);
+    -moz-transform:rotate(4deg);
+    position:relative;
+    top:5px;
+    background:#667292;
+}
+
+.itemDiv:nth-child(3n+1) {
+    -o-transform:rotate(-3deg);
+    -webkit-transform:rotate(-3deg);
+    -moz-transform:rotate(-3deg);
+    position:relative;
+    top:-5px;
+}
+
+.itemDiv:nth-child(5n-1) {
+    -o-transform:rotate(5deg);
+    -webkit-transform:rotate(5deg);
+    -moz-transform:rotate(5deg);
+    position:relative;
+    top:-10px;
+    background:#f1e3dd
+}
+  
+.itemDiv:hover,ul li :focus{
+    -moz-box-shadow:10px 10px 7px rgba(0,0,0,.7);
+    -webkit-box-shadow: 10px 10px 7px rgba(0,0,0,.7);
+    box-shadow:10px 10px 7px rgba(0,0,0,.7);
+    -webkit-transform: scale(1.25);
+    -moz-transform: scale(1.25);
+    -o-transform: scale(1.25);
+    position:relative;
+    z-index:5;
+}
+  
+
+ 
+  
