@@ -1,0 +1,76 @@
+﻿@model GuildCars.Models.SpecialsViewModel
+@{
+    ViewBag.Title = "Specials";
+}
+<div>
+    <h2>Specials</h2>
+    <div class="col-lg-12 col-md-12 col-sm-12 elementContainer">
+        <div class=" col-sm-12 col-md-6 col-lg-6">
+
+            @using (Html.BeginForm("Specials", "Admin", FormMethod.Post, new { enctype = "multipart/form-data" }))
+            {
+                @Html.ValidationSummary()
+                <fieldset>
+                    <div class="form-group col-sm-12 col-md-12 col-lg-12">
+                        <div class="col-md-4 col-lg-4">
+                            <p>Title:</p>
+                        </div>
+                        <div class="col-md-8 col-lg-8">
+                            @Html.TextBoxFor(m => m.special.SpecialName)
+                        </div>
+                    </div>
+                    <div class="form-group col-sm-12 col-md-12 col-lg-12">
+                        <div class="col-md-4 col-lg-4">
+                            <p>Image:</p>
+                        </div>
+                        <div class="col-md-8 col-lg-8">
+                            @*@Html.TextBoxFor(m => m.special.SpecialImageFileName, new { type = "file", accept = "image/jpeg,  image/jpg, image/png" })*@
+                            <input id="ImagePath" title="Upload File" type="file" name="file" />
+                        </div>
+                    </div>
+                    <div class="form-group col-sm-12 col-md-12 col-lg-12">
+                        <div class="col-md-4 col-lg-4">
+                            <p>Description:</p>
+                        </div>
+                        <div class="col-md-8 col-lg-8">
+                            @Html.TextAreaFor(m => m.special.SpecialDescription)
+                        </div>
+                    </div>
+                    <div class="SaveButton col-md-offset-4 ">
+                        <input id="SaveButton" name="SaveButton" type="submit" value="Submit" class="btn btn-primary">
+                    </div>
+                </fieldset>
+            }
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-12">
+            <h2>Specials</h2>
+            @foreach (var special in Model.specials)
+            {
+               
+        <div class="col-lg-12 col-md-12 col-sm-12 specialContainer">
+
+            <div class="col-sm-12 col-md-4 col-lg-4">
+                <img src="@Url.Content("~/Images/" + special.SpecialImageFileName)" class="detailsImg" />
+            </div>
+            <div class="col-sm-12 col-md-8 col-lg-8">
+                <p><h2>@special.SpecialName </h2></p>
+                <p><h4>@special.SpecialDescription</h4></p>
+                <p> *only for qualified individuals</p>
+            </div>
+                @using (Html.BeginForm( "Specials", "Admin", "Delete"))
+                {
+                <div class="col-sm-12 col-md-1 col-lg- top-right">
+     
+                    @Html.ActionLink("Delete", "DeleteSpecial", "Admin", new { id = special.SpecialId }, null)
+
+                </div>
+                }
+            </div>              
+            }
+        </div>
+    </div>
+</div>
+
+

@@ -1,0 +1,53 @@
+﻿@model GuildCars.Models.EditUserViewModel
+
+@{
+    ViewBag.Title = "AddUser";
+}
+
+
+
+    <div>
+        <h2>Add User</h2>
+        @using (Html.BeginForm("AddUser", "Admin", FormMethod.Post))
+        {
+            @Html.ValidationSummary()
+            <fieldset>
+                <div class="col-sm-12 col-md-6 col-lg-6">
+                    <div class="form-group col-12">
+                        <p>First Name:</p>
+                        @Html.TextBoxFor(m => m.user.FirstName, new { @class = "helper-format", style = "font-size: .9em, width: 20em " })
+                    </div>
+                    <div class="form-group col-12">
+                        <p>Email:</p>
+                        @Html.TextBoxFor(m => m.user.Email, new { @class = "helper-format", style = "font-size: .9em, width: 20em " })
+                    </div>
+                    <div class="form-group col-12">
+                        <p>Password:</p>
+                        @Html.PasswordFor(m => m.Password, new { @class = "helper-format", style = "font-size: .9em, width: 20em " })
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-6 col-lg-6">
+                    <div class="form-group col-12">
+                        <p>Last Name:</p>
+                        @Html.TextBoxFor(m => m.user.LastName, new { @class = "helper-format", style = "font-size: .9em, width: 20em " })
+                    </div>
+                    <div class="form-group col-4">
+                        <p>Role:</p>
+                        @Html.DropDownListFor(m => m.RoleId, Model.rolelist, new { @class = "helper-format", style = "font-size: .9em, width: 20em " })
+                    </div>
+                    <div class="form-group col-12">
+                        <p>Confirm Password:</p>
+                        @Html.PasswordFor(m => m.ConfirmPassword, new { @class = "helper-format", style = "font-size: .9em, width: 20em " })
+                    </div>
+                </div>
+                <br />
+                <div class="col-sm-12 col-md-12 col-lg-12">
+                    <div class="SaveButton">
+                        <input id="SaveButton" name="SaveButton" type="submit" value="Save" class="btn btn-primary">
+                    </div>
+                </div>
+            </fieldset>
+        }
+    </div>
+
+

@@ -1,0 +1,46 @@
+﻿@model GuildCars.Models.ContactUsViewModel
+@{
+    ViewBag.Title = "ContactUs";
+}
+<div class="col-sm-12 col-md-12 col-lg-12">
+    <h2>Contact Us</h2>
+</div>
+<div class="col-sm-12 col-md-6 col-lg-6">
+
+    @using (Html.BeginForm("ContactUs", "Home"))
+    {
+        @Html.ValidationSummary()
+        <form>
+            <div class="form-group col-12">
+                <p>Name:</p>
+                @Html.TextBoxFor(m => m.contactus.Name, new { @class = "helper-format", style = "font-size: .9em, width: 20em " })
+            </div>
+            <div class="form-group col-12">
+                <p>Email:</p>
+                @Html.TextBoxFor(m => m.contactus.Email, new { @class = "helper-format", style = "font-size: .9em, width: 20em " })
+            </div>
+            <div class="form-group col-12">
+                <p>Phone:</p>
+                @Html.TextBoxFor(m => m.contactus.Phone, new { @class = "helper-format", style = "font-size: .9em, width: 20em " })
+            </div>
+            <div class="form-group col-12">
+                <p>Message:</p>
+                @Html.TextAreaFor(m => m.contactus.Message, new { @class = "helper-format", style = "font-size: .9em, width: 20em " })
+            </div>
+            <div class="submitButton">
+                <input id="submitButton" name="submitButton" type="submit" value="Submit" class="btn btn-primary">
+                <input id="reset" name="clearButton" value="Clear Form" type="reset" class="btn btn-primary">
+            </div>
+        </form>
+    }
+</div>
+<div class="col-sm-12 col-md-6 col-lg-6">
+    <p><img src="@Url.Content("~/Images/Map.jpeg")" class="mapImg" /></p>
+    <p><strong>123 Tanooki Dr</strong></p>
+    <p><strong>Mushroom, Kingdom 13375</strong></p>
+    <br>
+    <p><strong>Sales: (555) 555-5555</strong></p>
+    <p><strong>Service: (555) 555-5555</strong></p>
+</div>
+
+

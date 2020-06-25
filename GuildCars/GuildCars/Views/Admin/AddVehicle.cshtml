@@ -1,0 +1,93 @@
+﻿@model GuildCars.Models.AddEditVehicleViewModel
+@{
+    ViewBag.Title = "AddVehicle";
+}
+
+<h2>Add Vehicle</h2>
+
+<div>
+    @using (Html.BeginForm("AddVehicle", "Admin", FormMethod.Post, new { enctype = "multipart/form-data" }))
+    {
+        @Html.ValidationSummary()
+        <fieldset>
+            <div class="col-sm-12 col-md-6 col-lg-6">
+                <div class="form-group col-12">
+                    <p>Make:</p>
+                    @Html.DropDownListFor(m => m.vehicle.MakeId, Model.makesList, new { @class = "helper-format", style = "font-size: .9em, width: 20em " })
+                </div>
+                <div class="form-group col-12">
+                    <p>Type:</p>
+                    @Html.DropDownListFor(m => m.vehicle.NewUsedId, Model.newUsedsList, new { @class = "helper-format", style = "font-size: .9em, width: 20em " })
+                </div>
+                <div class="form-group col-12">
+                    <p>Year:</p>
+                    @Html.TextBoxFor(m => m.vehicle.Year, new { @class = "helper-format", style = "font-size: .9em, width: 20em " })
+                </div>
+                <div class="form-group col-12">
+                    <p>Color:</p>
+                    @Html.DropDownListFor(m => m.vehicle.ExteriorColorId, Model.exteriorColorsList, new { @class = "helper-format", style = "font-size: .9em, width: 20em " })
+                </div>
+                <div class="form-group col-12">
+                    <p>Mileage:</p>
+                    @Html.TextBoxFor(m => m.vehicle.Mileage, new { @class = "helper-format", style = "font-size: .9em, width: 20em " })
+                </div>
+                <div class="form-group col-12">
+                    <p>MSRP:</p>
+                    @Html.TextBoxFor(m => m.vehicle.MSRP, new { @class = "helper-format", style = "font-size: .9em, width: 20em " })
+                </div>
+            </div>
+            <div class="col-sm-12 col-md-6 col-lg-6">
+
+                <div class="form-group col-12">
+                    <p>Model:</p>
+                    <select id="Model" name="vehicle.ModelId" class=" helper-format">
+                        <option value="0"></option>
+                    </select>
+                </div>
+                <div class="form-group col-12">
+                    <p>Body Style:</p>
+                    @Html.DropDownListFor(m => m.vehicle.BodyStyleId, Model.bodyStylesList, new { @class = "helper-format", style = "font-size: .9em, width: 20em " })
+                </div>
+                <div class="form-group col-12">
+                    <p>Transmission:</p>
+                    @Html.DropDownListFor(m => m.vehicle.TransmissionId, Model.transmissionsList, new { @class = "helper-format", style = "font-size: .9em, width: 20em " })
+                </div>
+                <div class="form-group col-12">
+                    <p>Interior:</p>
+                    @Html.DropDownListFor(m => m.vehicle.InteriorColorId, Model.interiorColorsList, new { @class = "helper-format", style = "font-size: .9em, width: 20em " })
+                </div>
+                <div class="form-group col-12">
+                    <p>VIN #:</p>
+                    @Html.TextBoxFor(m => m.vehicle.VIN, new { @class = "helper-format", style = "font-size: .9em, width: 20em " })
+                </div>
+                <div class="form-group col-12">
+                    <p>Sale Price:</p>
+                    @Html.TextBoxFor(m => m.vehicle.SalePrice, new { @class = "helper-format", style = "font-size: .9em, width: 20em " })
+                </div>
+            </div>
+            <div class="col-sm-12 col-md-12 col-lg-12">
+                <div class="form-group">
+                    <p>Description:</p>
+                    @Html.TextAreaFor(m => m.vehicle.Description, new { @class = "helper-format", style = "font-size: .9em, height: 20em, width: 20em " })
+                </div>
+            </div>
+            <div class="col-sm-12 col-md-6 col-lg-6">
+                <p>Picture:</p>
+                <input id="ImagePath" title="Upload File" type="file" name="file" />
+            </div>
+
+            <br>
+            <div class="col-sm-12 col-md-12 col-lg-12">
+                <div class="SaveButton">
+                    <input id="SaveButton" name="SaveButton" type="submit" value="Save" class="btn btn-primary">
+                </div>
+            </div>
+        </fieldset>
+    }
+
+    <script src="~/Scripts/jquery-2.2.3.min.js"></script>
+    <script src="~/Scripts/dataService.js"></script>
+    <script src="~/Scripts/addVehicle.js"></script>
+</div>
+
+

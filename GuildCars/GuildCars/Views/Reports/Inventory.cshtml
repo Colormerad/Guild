@@ -1,0 +1,66 @@
+﻿@model GuildCars.Models.InventoryReportViewModel
+@{
+    ViewBag.Title = "Inventory";
+}
+<div>
+    <h2>Inventory</h2>
+    <p>New Vehicles</p>
+    <div class=" col-sm-12 col-md-12 col-lg-12">
+        <div class="col-md-4 col-lg-4">
+            <table class="table table-bordered table-striped table-hover">
+                <thead class="thead-dark">
+                    <tr>
+                        <th scope="col">Year</th>
+                        <th scope="col">Make</th>
+                        <th scope="col">Model</th>
+                        <th scope="col">Count</th>
+                        <th scope="col">Stock Value</th>
+                    </tr>
+                </thead>
+                <tbody class="">
+                    @foreach (var newreport in Model.newInventoryReports)
+                    {
+                        <tr>
+                            <td>@newreport.Year</td>
+                            <td>@newreport.MakeName</td>
+                            <td>@newreport.ModelName</td>
+                            <td>@newreport.Count</td>
+                            <td>@newreport.Total</td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <p>Used Vehicles</p>
+    <div class=" col-sm-12 col-md-12 col-lg-12">
+        <div class="col-md-4 col-lg-4">
+            <table class="table table-bordered table-striped table-hover">
+                <thead class="thead-dark">
+                    <tr>
+                        <th scope="col">Year</th>
+                        <th scope="col">Make</th>
+                        <th scope="col">Model</th>
+                        <th scope="col">Count</th>
+                        <th scope="col">Stock Value</th>
+                    </tr>
+                </thead>
+                <tbody class="">
+                    @foreach (var usedreport in Model.usedInventoryReports)
+                    {
+                        <tr>
+                            <td>@usedreport.Year</td>
+                            <td>@usedreport.MakeName</td>
+                            <td>@usedreport.ModelName</td>
+                            <td>@usedreport.Count</td>
+                            <td>@usedreport.Total</td>
+                        </tr>
+                    }
+                   
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+

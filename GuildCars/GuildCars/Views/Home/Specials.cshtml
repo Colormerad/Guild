@@ -1,0 +1,28 @@
+﻿@model GuildCars.Models.SpecialsViewModel
+
+@{
+    ViewBag.Title = "Specials";
+}
+
+<div class="col-xs-12 col-sm-12 col-md-12 Col-lg-12 ">
+    <h2>Specials</h2>
+</div>
+
+    @foreach (var special in Model.specials)
+    {
+        <div class="col-xs-12 col-sm-12 col-md-12 Col-lg-12 specialContainer">
+
+            <div class="col-lg-4 col-md-4">
+                <img height="200" src="@Url.Content("~/Images/" + special.SpecialImageFileName)" />
+            </div>
+            <div class="col-lg-8 col-md-8">
+                <p><h3>@special.SpecialName </h3></p>
+                <p>@special.SpecialDescription</p>
+                <p> *only for qualified individuals</p>
+            </div>
+
+        </div>
+    }
+
+
+

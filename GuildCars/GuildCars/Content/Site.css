@@ -1,0 +1,168 @@
+﻿
+
+h2 {
+    font-family: Acme;
+}
+navbar{
+    margin-bottom:auto;
+}
+body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+    background-color: aliceblue;
+}
+.jumbotron {
+    border-style: solid;
+    border-width: 2px;
+    border-color: black;
+    background-color: white;
+    background: url(/Images/flags.jpeg);
+    background-size: 100% 100%;
+    text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
+}
+
+.bannerImage {
+    height: 20em;
+}
+
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Override the default bootstrap behavior where horizontal description lists 
+   will truncate terms that are too long to fit in the left column 
+*/
+.dl-horizontal dt {
+    white-space: normal;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+
+.vehicleElement {
+    border-style: solid;
+    border-width: 2px;
+    border-color: black;
+    margin: .5em;
+    width: 20vw;
+    height: 20vw;
+    background-color: white;
+}
+.detailsImg {
+    height: 80%;
+    width: 80%;
+
+    
+}
+.detailsTitle {
+    margin: 0 auto;
+    display: inline-block;
+    text-align: 
+}
+.detailsText{
+   text-align:center;
+   float:left;
+}
+table {
+    border-spacing: 5em .5em;
+    vertical-align: middle;
+    
+    width: 100%;
+    font-size: 14px;
+}
+tbody {
+    width: 100%;
+    
+}
+
+.detailsTable {
+    margin: 5em, 2em, 0, 0;
+    font-size: 14px;
+    border-style: solid;
+    border-width: 2px;
+    border-color: black;
+    background-color: white;
+    width: 100%;
+}
+
+
+.containerImg {
+    vertical-align: middle;
+    height: 120px;
+    padding-top: 10%;
+    background-color: white;
+}
+
+.featuredVehicles {
+    text-align: center;
+    color: black;
+
+}
+.vehicleDetails {
+    border-style: solid;
+    border-width: 2px;
+    border-color: black;
+    background-color: white;
+}
+
+.vehicleDetailsImage {
+    max-height: 90%;
+    max-width: 90%;
+}
+.specialContainer {
+    border-style: solid;
+    border-width: 2px;
+    border-color: black;
+    margin: .5em;
+    padding: .5em;
+    background-color: white;
+}
+
+.tableDetails {
+    height: 100%;
+}
+
+.elementContainer {
+    border-style: solid;
+    border-width: 2px;
+    border-color: black;
+    padding: .5em;
+    width: 100%;
+    background-color: white;
+}
+
+.searchButton {
+    margin: .5em;
+}
+
+.mapImg {
+    vertical-align: middle;
+    height: 90%;
+    width: 90%;
+    padding-top: 10%
+}
+
+.descriptionContainer {
+    height: 80vw;
+    width: 80vw;
+    background-color: white;
+    border-style: solid;
+    border-width: 2px;
+    border-color: black;
+}
+
+.searchResults {
+    margin: .5em;
+}
+
+.helper-format {
+    width: 100%;
+    font-size: 1.2em;
+}

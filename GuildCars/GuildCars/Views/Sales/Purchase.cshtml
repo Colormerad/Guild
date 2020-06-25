@@ -1,0 +1,98 @@
+﻿@model GuildCars.Models.OrdersViewModel
+@{
+    ViewBag.Title = "Purchase";
+}
+    <div class="col-xs-12">
+        <h2>Purchase Vehicle</h2>
+        <div class="detailsTable container col-lg-12 col-md-12">
+            <div class="col-lg-4 col-md-4">
+                <p><h4>@Model.vehicleDetail.Year  @Model.vehicleDetail.MakeName @Model.vehicleDetail.ModelName</h4></p>
+                <p><img src="@Url.Content("~/Images/" + Model.vehicleDetail.ImageFileName)" class="vehicleDetailsImage" /></p>
+            </div>
+            <div>
+                <br>
+                <br>
+                <br>
+                <table class="col-lg-8 col-md-8 ">
+                    <tbody>
+                        <tr>
+                            <td><strong>Body Style: </strong></td>
+                            <td>@Model.vehicleDetail.BodyStyleName</td>
+                            <td><strong>Interior: </strong></td>
+                            <td>@Model.vehicleDetail.InteriorColorName</td>
+                            <td><strong>Sale Price: </strong></td>
+                            <td>@Model.vehicleDetail.SalePrice.ToString("c")</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td><strong>Trans: </strong></td>
+                            <td>@Model.vehicleDetail.TransmissionName</td>
+                            <td><strong>Mileage: </strong></td>
+                            <td>@Model.vehicleDetail.Mileage</td>
+                            <td><strong>MSRP: </strong></td>
+                            <td>@Model.vehicleDetail.MSRP.ToString("c")</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Color: </strong></td>
+                            <td>@Model.vehicleDetail.ExteriorColorName</td>
+                            <td><strong>Vin #: </strong></td>
+                            <td>@Model.vehicleDetail.VIN</td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <p><strong>Description: </strong>@Model.vehicleDetail.Description </p>
+        </div>
+        <h2>Sales Information</h2>
+        @using (Html.BeginForm("Purchase", "Sales"))
+        {
+            @Html.ValidationSummary()
+            @Html.HiddenFor(x => x.vehicleDetail.VehicleId)
+            @Html.HiddenFor(x => x.vehicleDetail.MSRP)
+            <fieldset>
+                <div class="col-sm-12 col-md-6 col-lg-6">
+                    <p>Name:</p>
+                    @Html.TextBoxFor(m => m.order.CustomerName, new { @class = "helper-format", style = "font-size: .9em, width: 20em " })
+                    <p>Email:</p>
+                    @Html.TextBoxFor(m => m.order.CustomerEmail, new { @class = "helper-format", style = "font-size: .9em, width: 20em " })
+                    <p>Street 1:</p>
+                    @Html.TextBoxFor(m => m.order.CustomerStreet1, new { @class = "helper-format", style = "font-size: .9em, width: 20em " })
+                    <p>City:</p>
+                    @Html.TextBoxFor(m => m.order.CustomerCity, new { @class = "helper-format", style = "font-size: .9em, width: 20em " })
+                    <p>Zipcode:</p>
+                    @Html.TextBoxFor(m => m.order.CustomerZipcode, new { @class = "helper-format", style = "font-size: .9em, width: 20em " })
+                    <p>Purchase Price:</p>
+                    @Html.TextBoxFor(m => m.order.OrderTotal, new { @class = "helper-format", style = "font-size: .9em, width: 20em " })
+                </div>
+                <div class="col-sm-12 col-md-6 col-lg-6">
+                    <p>Phone:</p>
+                    @Html.TextBoxFor(m => m.order.CustomerPhone, new { @class = "helper-format", style = "font-size: .9em, width: 20em " })
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <p>Street 2:</p>
+                    @Html.TextBoxFor(m => m.order.CustomerStreet2, new { @class = "helper-format", style = "font-size: .9em, width: 20em " })
+                    <p>State:</p>
+                    @Html.TextBoxFor(m => m.order.CustomerState, new { @class = "helper-format", style = "font-size: .9em, width: 20em " })
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <p>Purchase Type:</p>
+                    @Html.DropDownListFor(m => m.order.PurchaseTypeId, Model.PurchaseTypeList, new { @class = "helper-format", style = "font-size: .9em, width: 20em " })
+                </div>
+                <div class="col-sm-12 col-md-12 col-lg-12">
+                    <br>
+                    <div class="SaveButton">
+                        <input id="SaveButton" name="SaveButton" type="submit" value="Save" class="btn btn-primary">
+                    </div>
+                </div>
+            </fieldset>
+        }
+    </div>
+
+
+

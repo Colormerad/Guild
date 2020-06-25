@@ -1,0 +1,56 @@
+﻿@model GuildCars.Models.Queries.VehicleDetails
+
+@{
+    ViewBag.Title = "Details";
+}
+
+    <div class="row">
+        <div class= "col-xs-12" >
+            <h2>Vehicle Details</h2>
+            <div class="vehicleDetails container">
+                <div class=" col-md-6 col-lg-6 detailsTitle">
+                    <h4>@Model.Year  @Model.MakeName @Model.ModelName</h4>
+                    <p><img width= "250"src="@Url.Content("~/Images/" + Model.ImageFileName)" class="detailsImg" /></p>     
+                </div>
+                <div class=" col-md-6 col-lg-6">
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <table>
+                        <tbody>
+                            <tr>
+                                <td><strong>Body Style: </strong></td>
+                                <td>@Model.BodyStyleName</td>
+                                <td><strong>Interior: </strong></td>
+                                <td>@Model.InteriorColorName</td>
+                                <td><strong>Sale Price: </strong></td>
+                                <td>@Model.SalePrice.ToString("c")</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td><strong>Trans: </strong></td>
+                                <td>@Model.TransmissionName</td>
+                                <td><strong>Mileage: </strong></td>
+                                <td>@Model.Mileage</td>
+                                <td><strong>MSRP: </strong></td>
+                                <td>@Model.MSRP.ToString("c")</td>
+
+                            </tr>
+                            <tr>
+                                <td><strong>Color: </strong></td>
+                                <td>@Model.ExteriorColorName</td>
+                                <td><strong>Vin #: </strong></td>
+                                <td>@Model.VIN</td>
+                                <td></td>
+                                <td>@Html.ActionLink("Contact Us", "ContactUs", "Home", new {@VIN = Model.VIN },new{ @class = "btn btn-primary btn-large"})</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <p><strong>Description: </strong>@Model.Description </p>
+                </div>
+            </div>
+        </div>
+    </div>
+

@@ -1,0 +1,92 @@
+﻿@model GuildCars.Models.VehicleSearchViewModel
+
+    @{
+        ViewBag.Title = "Used";
+    }
+
+    <div class=" col-12">
+        
+        <div>
+            <h2>Used Vehicles</h2>
+            <div class="elementContainer container">
+                <h3>Quick Search</h3>
+                <div class=" col-xs-12 form-inline ">
+                    <form>
+                        <div class="col-sm-4">
+                            <input id="searchinput" name="searchinput" type="search" placeholder="Enter make, model, or year" class="form-control input-md">
+                        </div>
+                        <!--Price-->
+                        <div class=" form-inline col-md-4 col-sm-8">
+                            <div>
+                                <b>Price: </b>
+                                <select id="minPrice" name="minPrice" class="form-control input-xs">
+                                    <option value="-1">No Min</option>
+                                    <option value="500">$500</option>
+                                    <option value="1000">$1000</option>
+                                    <option value="2000">$2000</option>
+                                    <option value="5000">$5000</option>
+                                </select>
+                                <select id="maxPrice" name="maxPrice" class="form-control input-xs">
+                                    <option value="-1">No Max</option>
+                                    <option value="1000">$1000</option>
+                                    <option value="2000">$2000</option>
+                                    <option value="5000">$5000</option>
+                                    <option value="10000">$10000</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class=" form-inline col-md-4 col-sm-8">
+                            <div>
+                                <b>Year: </b>
+                                <select id="minYear" name="minYear" class="form-control input-xs">
+                                    <option value="-1">No Min</option>
+                                    <option value="1800">1800</option>
+                                    <option value="2010">2010</option>
+                                    <option value="2015">2015</option>
+                                    <option value="2019">2019</option>
+                                    <option value="2020">2020</option>
+                                </select>
+
+                                <select id="maxYear" name="maxYear" class="form-control input-xs">
+                                    <option value="-1">No Max</option>
+                                    <option value="1900">1900</option>
+                                    <option value="2010">2010</option>
+                                    <option value="2015">2015</option>
+                                    <option value="2020">2020</option>
+                                </select>
+                            </div>
+                        </div>
+                        <br />
+                        <div class="form-group">
+                            <label class="control-label" for="searchNew"></label>
+                            <div class="col-lg-offset-4 searchButton">
+                                <input id="submitUsedButton" name="submitUsedButton" value="Submit" class="btn btn-primary">
+                                <input id="reset" name="clearButton" value="Clear Form" type="reset" class="btn btn-primary">
+                            </div>
+                        </div>
+                    </form>
+                
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-xs-12">
+                <h2>Search Results</h2>
+
+                <div>
+                    <table  id="vehicleTable">
+                        <tbody>
+                        </tbody>
+                    </table>
+
+                </div>
+            </div>
+        </div>
+        <script src="~/Scripts/jquery-2.2.3.min.js"></script>
+        <script src="~/Scripts/dataService.js"></script>
+        <script src="~/Scripts/home.js"></script>
+    </div>
+
+    

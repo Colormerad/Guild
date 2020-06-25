@@ -1,0 +1,55 @@
+﻿@model GuildCars.Models.MakesViewModel
+@{
+    ViewBag.Title = "Makes";
+}
+
+
+    <div class="col-sm-12 col-md-12 col-lg-12">
+        <h2>Makes</h2>
+        @using (Html.BeginForm("Makes", "Admin"))
+        {
+            @Html.ValidationSummary()
+            <fieldset>
+                <div class=" elementContainer col-sm-12 col-md-12 col-lg-12">
+                    <div class="form-group col-sm-3 col-md-2 col-lg-2 ">
+                        <p class="">New Make:</p>
+                    </div>
+                    <div class="form-group col-sm-6 col-md-4 col-lg-4 ">
+                        @Html.TextBoxFor(m => m.make.MakeName)
+                    </div>
+                    <div class="form-group col-sm-3 col-md-2 col-lg-2 ">
+                        <input id="SaveButton" name="SaveButton" type="submit" value="Submit" class="btn btn-primary"></input>
+                    </div>
+                </div>
+            </fieldset>
+        }
+    </div>
+<div class=" col-sm-12 col-md-12 col-lg-12">
+    <div class="col-md-4 col-lg-4">
+        <table class="table table-bordered table-striped table-hover">
+            <thead class="thead-dark">
+                <tr>
+                    <th scope="col">Make</th>
+                    <th scope="col">Date Added</th>
+                    <th scope="col">User</th>
+                </tr>
+            </thead>
+            <tbody class="">
+                @foreach (var make in Model.makes)
+                {
+                    
+                    <tr>
+                        <td>@make.MakeName</td>
+                        <td>@make.AddedDate</td>
+                        <td>@make.UserId</td>
+                    </tr>
+                }
+
+
+            </tbody>
+        </table>
+    </div>
+</div>
+
+
+

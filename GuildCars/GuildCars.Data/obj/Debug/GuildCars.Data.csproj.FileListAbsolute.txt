@@ -1,0 +1,9 @@
+\\Mac\Home\Desktop\GuildCars\GuildCars.Data\bin\Debug\GuildCars.Data.dll
+\\Mac\Home\Desktop\GuildCars\GuildCars.Data\bin\Debug\GuildCars.Data.pdb
+\\Mac\Home\Desktop\GuildCars\GuildCars.Data\bin\Debug\GuildCars.Models.dll
+\\Mac\Home\Desktop\GuildCars\GuildCars.Data\bin\Debug\GuildCars.Models.pdb
+\\Mac\Home\Desktop\GuildCars\GuildCars.Data\obj\Debug\GuildCars.Data.csprojAssemblyReference.cache
+\\Mac\Home\Desktop\GuildCars\GuildCars.Data\obj\Debug\GuildCars.Data.csproj.CoreCompileInputs.cache
+\\Mac\Home\Desktop\GuildCars\GuildCars.Data\obj\Debug\GuildCars.Data.csproj.CopyComplete
+\\Mac\Home\Desktop\GuildCars\GuildCars.Data\obj\Debug\GuildCars.Data.dll
+\\Mac\Home\Desktop\GuildCars\GuildCars.Data\obj\Debug\GuildCars.Data.pdb
